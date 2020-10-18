@@ -1,10 +1,6 @@
 import { SET_CLASSES } from "./actionTypes";
-import axios from "axios";
+import instance from "./instance";
 import { classes } from "./data";
-
-const instance = axios.create({
-  baseURL: "",
-});
 
 export const fetchClasses = () => async (dispatch) => {
   try {

@@ -1,7 +1,12 @@
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
-import { fetchBookings, fetchClasses, fetchGyms } from "./actions";
+import {
+  fetchBookings,
+  fetchClasses,
+  fetchGyms,
+  isTokenValid,
+} from "./actions";
 
 import rootReducer from "./reducers";
 
@@ -15,5 +20,6 @@ const store = createStore(
 // store.dispatch(fetchBookings());
 store.dispatch(fetchClasses());
 // store.dispatch(fetchGyms());
+store.dispatch(isTokenValid());
 
 export default store;

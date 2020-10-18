@@ -1,9 +1,5 @@
 import { SET_GYMS } from "./actionTypes";
-import axios from "axios";
-
-const instance = axios.create({
-  baseURL: "",
-});
+import instance from "./instance";
 
 export const fetchGyms = () => async (dispatch) => {
   try {
