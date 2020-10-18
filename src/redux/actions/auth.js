@@ -31,7 +31,7 @@ export const isTokenValid = () => {
       if (user.exp >= Date.now() / 1000) {
         instance.defaults.headers.Authorization = `Bearer ${token}`;
         dispatch({
-          type: LOGIN,
+          type: AUTHENTICATE,
           payload: user,
         });
       } else {
