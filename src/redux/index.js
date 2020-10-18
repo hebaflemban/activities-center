@@ -1,7 +1,7 @@
 import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
-import {fetchBookings} from "./actions";
+import { fetchBookings, fetchClasses, fetchGyms } from "./actions";
 
 import rootReducer from "./reducers";
 
@@ -12,6 +12,8 @@ const store = createStore(
   composeEnhancers(applyMiddleware(thunk))
 );
 
-store.dispatch(fetchBookings());
+// store.dispatch(fetchBookings());
+store.dispatch(fetchClasses());
+// store.dispatch(fetchGyms());
 
 export default store;
