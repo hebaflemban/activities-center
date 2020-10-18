@@ -1,24 +1,25 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { connect } from "react-redux";
+import NavBar from "./NavBar";
+import GymsList from "./Gym/GymsList";
+import { Switch, Route } from "react-router-dom";
 
 function App({ classes }) {
   console.log("hiii", classes);
+
+  // navbar
+  //cata
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{classes[0].title}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <div>
+        <Switch>
+          <Route path="/gyms">
+            <GymsList />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }

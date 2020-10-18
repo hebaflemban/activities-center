@@ -1,4 +1,4 @@
 export { fetchClasses } from "./classes";
 export { fetchBookings } from "./bookings";
-export { fetchGyms } from "./gyms";
-export { authenticate, isTokenValid, logout } from "./auth";
+export { fetchGyms, addGym } from "./gyms";
+export { isAccessValid, logout } from "./auth";

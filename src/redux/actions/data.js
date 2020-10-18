@@ -2,10 +2,14 @@ export const gyms = [
   {
     id: 1,
     name: "gym name",
+    address: "somewhere",
+    logo: "https://placeimg.com/640/480/arch",
   },
   {
     id: 2,
     name: "gym name 2",
+    address: "near you",
+    logo: "https://placeimg.com/640/480/arch",
   },
 ];
 
