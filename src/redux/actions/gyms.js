@@ -1,12 +1,10 @@
 import { SET_GYMS, ADD_GYM } from "./actionTypes";
 import instance from "./instance";
-import { gyms } from "./data";
 
-export const fetchGyms = () => async (dispatch) => {
+export const fetchGyms = () => async dispatch => {
   try {
-    // const res = await instance.get("/gyms");
-    // //are we doing classes/bookings or user/bookings or gym/bookings or ALL bookings then we filter
-    // const gyms = res.data;
+    const res = await instance.get("/gyms/");
+    const gyms = res.data;
     dispatch({
       type: SET_GYMS,
       payload: gyms,
