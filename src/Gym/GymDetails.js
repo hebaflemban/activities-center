@@ -2,6 +2,8 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
+import AddClassButton from "../Classes/AddClassButton";
+import ClassesList from "../Classes/ClassesList";
 
 // Components
 // import BookTable from "./BookTable";
@@ -28,7 +30,7 @@ const GymDetails = ({ gyms, classes }) => {
         <img src="#" className="img-thumbnail img-fluid" alt={gym.name} />
       </div>
       <ClassesList classes={gymClasses} />
-      {/* {user && <AddClassModal gymID={gym.id} />} */}
+      <AddClassButton gymID={gym.id} />
     </div>
   );
 };
