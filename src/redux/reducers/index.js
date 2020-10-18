@@ -1,9 +1,11 @@
-import {combineReducers} from "redux";
+import { combineReducers } from "redux";
 
-import bookingsReducer from "./bookings"
+import bookingsReducer from "./bookings";
+import classesReducer from "./classes";
 
 const rootReducer = combineReducers({
   bookingsState: bookingsReducer,
-})
+  classesState: classesReducer,
+});
 
-export default rootReducer
+export default rootReducer;
