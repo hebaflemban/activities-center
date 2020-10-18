@@ -1,13 +1,12 @@
 import { SET_GYMS, ADD_GYM } from "../actions/actionTypes";
 
-const initialState = {
-  gyms: [],
-};
+const initialState = [];
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_GYMS:
-      return action.payload;
+      const gyms = action.payload;
+      return gyms;
     case ADD_GYM:
       return [action.payload, ...state];
     default:

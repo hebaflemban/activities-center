@@ -6,7 +6,7 @@ import Cookies from "js-cookie";
 export const login = (user, arg) => {
   return async (dispatch) => {
     try {
-      const res = await instance.post(`${arg}`, user);
+      const res = await instance.post("/login/", user);
       const { access } = res.data;
       instance.defaults.headers.Authorization = `jwt ${access}`;
       Cookies.set("access", access);
