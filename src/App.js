@@ -22,9 +22,13 @@ function App({ classes }) {
           <Route path="/classes/:classID">
             <ClassDetails />
           </Route>
-          <Route path="/classes">
+          <Route path="/categories/:type?">
             <ClassesList />
           </Route>
+          <Route path="/classes/">
+            <ClassesList />
+          </Route>
+
           <Route path="/gyms/:gymID">
             <GymDetails />
           </Route>

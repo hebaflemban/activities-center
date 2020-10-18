@@ -27,7 +27,7 @@ export const classes = [
   {
     id: 2,
     title: "class name 2",
-    type: "walking",
+    type: "swimming",
     date: "tomorrow",
     time: "at 8",
     isFree: false,
