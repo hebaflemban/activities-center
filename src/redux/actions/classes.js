@@ -1,5 +1,5 @@
 import { SET_CLASSES } from "./actionTypes";
-import instance from "./instance";
+// import instance from "./instance";
 import { classes } from "./data";
 
 export const fetchClasses = () => async (dispatch) => {
