@@ -35,16 +35,23 @@ export const classes = [
     gym: gyms[1],
   },
 ];
-
+const users = [
+  {
+    id: 0,
+  },
+  {
+    id: 1,
+  },
+];
 export const bookings = [
   {
     id: 1,
-    user: "user 1",
+    user: users[0],
     class: classes[0],
   },
   {
     id: 2,
-    user: "user 2",
+    user: users[0],
     class: classes[1],
   },
 ];
