@@ -4,11 +4,13 @@ import { connect } from "react-redux";
 import NavBar from "./NavBar";
 import GymsList from "./Gym/GymsList";
 import ClassesList from "./Classes/ClassesList";
+import LoginForm from "./LoginForm"
+
 import { Switch, Route } from "react-router-dom";
 import ClassDetails from "./Classes/ClassDetails";
 import GymDetails from "./Gym/GymDetails";
 function App({ classes }) {
-  console.log("hiii", classes);
+  // console.log("hiii", classes);
 
   // navbar
   //cata
@@ -28,6 +30,9 @@ function App({ classes }) {
           </Route>
           <Route path="/gyms">
             <GymsList />
+          </Route>
+          <Route path="/login">
+            <LoginForm />
           </Route>
         </Switch>
       </div>
