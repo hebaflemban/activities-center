@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 // Components
 import GymCard from "./GymCard";
-import Searchbar from "../Searchbar";
+import Searchbar from "../SearchBar";
 // import Loading from "../Loading";
 import AddGymCard from "./AddGymCard";
 

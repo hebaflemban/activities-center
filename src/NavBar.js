@@ -3,8 +3,9 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { connect } from "react-redux";
 
-const NavBar = () => {
+const NavBar = ({ user }) => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="/">ARC</Navbar.Brand>
@@ -29,7 +30,7 @@ const NavBar = () => {
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link href="#deets">My Bookings</Nav.Link>
+          <Nav.Link href={`/bookings/${user.id}`}>My Bookings</Nav.Link>
           <Nav.Link eventKey={2} href="/login">
             Login
           </Nav.Link>
@@ -39,4 +40,10 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+const mapStatesToProps = (state) => {
+  return {
+    user: state.userState,
+  };
+};
+
+export default connect(mapStatesToProps)(NavBar);

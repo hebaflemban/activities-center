@@ -2,7 +2,7 @@ import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
 import {
-  // fetchBookings,
+  fetchBookings,
   fetchClasses,
   fetchGyms,
   isAccessValid,
@@ -17,7 +17,7 @@ const store = createStore(
   composeEnhancers(applyMiddleware(thunk))
 );
 
-// store.dispatch(fetchBookings());
+store.dispatch(fetchBookings());
 store.dispatch(fetchClasses());
 store.dispatch(fetchGyms());
 store.dispatch(isAccessValid());
